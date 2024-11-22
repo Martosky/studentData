@@ -13,6 +13,7 @@ body{background-color: beige;}
 
 main{
     width: 70%;
+    height: 100vh;
     margin: 0 auto;
     background-color: var(--background);
 }
@@ -37,4 +38,34 @@ main{
 img{
     width: 100%;
     height: 100%;
+}
+
+section{
+   margin: 5px;
+}
+
+.data-header{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h2{
+    border: 1px solid black;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.data{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+p{
+    
+    padding: 10px ;
+    
 }
