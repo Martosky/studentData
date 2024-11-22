@@ -11,22 +11,43 @@
         <div class="student-info">
             <img src="smilley.png" alt="smiling face">
             <h4>Harrison Martins</h4>
+            <h4>class: basic 5</h4>
         </div>
+          
+        <section>
+            <label for="select">Select</label>
+            <select>
+                <option value="">Mathematics</option>
+                <option value="">English</option>
+                <option value="">Economics</option>
+                <option value="">Agric</option>
+                <option value="">C.R.S</option>
+                <option value="">Basic Science</option>
+                <option value="">Biology</option>
+                <option value="">Civic education</option>
+                <option value="">Phonetics</option>
+                <option value="">Verbal Reasoning</option>
+            </select>
+            <label for="st-score">Student score</label>
+            <input type="number" id="st-score" placeholder="Text score e.g 40" />
+        </section>
 
         <div class="student-data">
-         <table>
-            <tr>
-              <th>No</th>
-              <th>Subject</th>
-              <th>Score</th>
-            </tr>
-            <tr>
-              <td>1</td>
-              <td>Maths</td>
-              <td>45</td>
-            </tr>
-         </table>
+           <div class="data-header">
+            <h2>No.</h2>
+            <h2>Subject</h2>
+            <h2>Average Score</h2>
+            <h2>Grade</h2>
+           </div>
+
+           <div class="data">
+            <p id="seria-no">1</p>
+            <p id="subject">Mathematics</p>
+            <p id="score">50</p>
+            <p id="grade">C</p>
+           </div>
         </div>
+        <h5 class="output-msg">You scored 70.3, your score C, you passed</h5>
     </main>
 </body>
 </html>
