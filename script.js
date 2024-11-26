@@ -5,14 +5,20 @@ const message = document.querySelector("#output-msgs")
 const outputData = document.querySelector("#data")
 
 button.onclick = addScoreGrade
-function addScoreGrade(){
-    let subject = selectElem.value;
-    let score = inputValue.value;
 
-    let display = `<p>${subject}</p> <p>${score}</p>`
+
+function checkAverage(scores){
+    let totalScore = 0;
+    let averageScore;
+  for (let score of scores){
+     totalScore += score;
+     averageScore = totalScore / scores.length
+  }
+  return averageScore;
 }
 
-function checkScore(score){
+
+function getGrade(score){
       if(score === 100){
         return A++
       }else if(score >= 90){
@@ -30,6 +36,19 @@ function checkScore(score){
       }
       
 }
-function checkAverage(score, totalscore){
-    
+
+
+function checkGrade(score){
+   return getGrade(score) !== "F";
+}
+
+function addScoreGrade(){
+    let subject = selectElem.value;
+    let stScore = inputValue.value;
+    if(stScore !== ""){
+    let grade = getGrade(stScore)
+    outputData.innerHTML = `<p>${subject}</p> <p>${stScore}</p> <p>${grade}</p>`
+  }else{
+    alert("Input student score")
+  }
 }
