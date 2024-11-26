@@ -20,7 +20,7 @@ function checkAverage(scores){
 
 function getGrade(score){
       if(score === 100){
-        return A++
+        return "A+";
       }else if(score >= 90){
         return "A";
       }else if(score >= 80){
@@ -30,9 +30,9 @@ function getGrade(score){
       }else if(score >= 60){
         return "D";
       }else if(score >= 50){
-        return "E"
+        return "E";
       }else{
-        return "F"
+        return "F";
       }
       
 }
@@ -45,10 +45,8 @@ function checkGrade(score){
 function addScoreGrade(){
     let subject = selectElem.value;
     let stScore = inputValue.value;
-    if(stScore !== ""){
-    let grade = getGrade(stScore)
-    outputData.innerHTML = `<p>${subject}</p> <p>${stScore}</p> <p>${grade}</p>`
-  }else{
-    alert("Input student score")
-  }
+    let grade = getGrade(stScore);
+    let dataOputElem = `<p>${subject}</p> <p>${stScore}</p> <p>${grade}</p> \n`
+    outputData.insertAdjacentHTML("beforeend", dataOputElem)
+    subject = ""
 }

@@ -1,5 +1,5 @@
 :root {
-    --background : orangered;
+    --background : rgb(238, 177, 10);
     --element : orange;
 }
 
@@ -61,6 +61,7 @@ h2{
     border: 1px solid black;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
