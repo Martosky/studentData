@@ -4,7 +4,7 @@ const button = document.querySelector("#btn");
 const message = document.querySelector("#output-msgs")
 const outputData = document.querySelector("#data")
 
-button.onclick = addSCoreGrade
+button.onclick = addScoreGrade
 function addScoreGrade(){
     let subject = selectElem.value;
     let score = inputValue.value;
@@ -30,4 +30,6 @@ function checkScore(score){
       }
       
 }
-console.log(checkScore(40))
+function checkAverage(score, totalscore){
+    
+}
