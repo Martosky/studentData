@@ -50,3 +50,5 @@ function addScoreGrade(){
     outputData.insertAdjacentHTML("beforeend", dataOputElem)
     subject = ""
 }
+
+
