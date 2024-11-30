@@ -3,8 +3,21 @@ const selectContent = document.querySelector("#select-item");
 const input = document.querySelector("#no-input");
 const numberOutput = document.querySelector("#no-count");
 const subjectOutput = document.querySelector("#subjec-item");
-const studentScore = document.querySelector("#st-score");
+const stScore = document.querySelector("#st-score");
 const studentGrade = document.querySelector("#st-grade");
+
+
+
+const outputContent = () => {
+  const selectVal = selectContent.value;
+  const inputContent = input.value;
+  const grades = getGrade(inputContent)
+  if(inputContent !== ""){
+    let li = document.createElement("li");
+    li.innerHTML = selectVal;
+    subjectOutput.appendChild(li)
+  }else{ alert("Input student score")}
+}
 
 const getAVerage = scores => {
   let sum = 0
@@ -15,7 +28,7 @@ const getAVerage = scores => {
   }
   return average
 }
-console.log(getAVerage([100, 58, 60, 43, 38, 85, 10]))
+
 
 const getGrade = (score) => {
   if(score === 100){
@@ -46,3 +59,4 @@ const outputMsg = (totalScore, studentScore) => {
     }
 
 }
+ 
