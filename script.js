@@ -1,22 +1,16 @@
 const button = document.querySelector("#btn");
 const selectContent = document.querySelector("#select-item");
 const input = document.querySelector("#no-input");
-const numberOutput = document.querySelector("#no-count");
-const subjectOutput = document.querySelector("#subjec-item");
-const stScore = document.querySelector("#st-score");
-const studentGrade = document.querySelector("#st-grade");
-
-
+const output = document.querySelector("#output")
 
 const outputContent = () => {
   const selectVal = selectContent.value;
   const inputContent = input.value;
   const grades = getGrade(inputContent)
+  const displayInputs = output;
   if(inputContent !== ""){
-    let li = document.createElement("li");
-    li.innerHTML = selectVal;
-    subjectOutput.appendChild(li)
-  }else{ alert("Input student score")}
+    let contents = ``
+  }
 }
 
 const getAVerage = scores => {
