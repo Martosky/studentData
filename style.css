@@ -40,13 +40,13 @@ body{
 .main-content{
     width: 85vw;
     margin: 0 auto ;
-    background-color: var(--second-bg);
+   
     display: flex;
     flex-direction: row;
 }
 
 .input-element{
-    width: 30%;
+    width: 20%;
     padding: 20px;
     background-color: var(--other-elem-bg) ; 
 }
@@ -65,10 +65,13 @@ button{
 
 .body-content{
     background-color: rgba(245, 248, 248, 0.5);
-    width: 70%;
-    display: flex;
+    width: 60%;
     padding: 0;
     
+}
+
+.bc-info{
+    display: flex;
 }
 
 .cont-head{
@@ -77,15 +80,20 @@ button{
     text-align: center;
 }
 
-ul{
+#output{
     width: 100%;
     padding: 0;
 }
-ul li {
-    list-style-type: none;
-    width: 100%;
-    margin:  10px auto;
-    padding-top: 10px;
+
+.output-items{
+    display: flex;
+    align-items: center;
+}
+
+.output-elem {
+    width: 25%;
+    text-align: center;
+    margin: auto 0;
     border-top: 2px solid var(--second-bg);
-    ;
+    padding: 10px 0;
 }
