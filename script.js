@@ -36,3 +36,13 @@ const getGrade = (score) => {
 }
 }
 
+const hasPassingGrade = score => { return getGrade(score) !== "F"}
+console.log(hasPassingGrade())
+
+const outputMsg = (totalScore, studentScore) => {
+
+    if(hasPassingGrade(totalScore)){
+      return `hello`
+    }
+
+}
