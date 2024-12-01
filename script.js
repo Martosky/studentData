@@ -71,3 +71,13 @@ const outputMsg = (totalScore, studentScore) => {
 
 }
  
+const tryElem = document.getElementById("try");
+const tryBtn = document.getElementById("trybtn")
+tryBtn.addEventListener("click", function (){
+  let count = 0;
+   if (count <= 10){
+    count += 1;
+    tryElem.innerText = count
+   }
+   
+})
