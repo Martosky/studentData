@@ -75,8 +75,8 @@ const tryElem = document.getElementById("try");
 const tryBtn = document.getElementById("trybtn")
 tryBtn.addEventListener("click", function (){
   let count = 0;
-   if (count <= 10){
-    count += 1;
+   for (let i = 0; i <= 10; i++){
+    count++
     tryElem.innerText = count
    }
    
