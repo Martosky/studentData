@@ -79,5 +79,4 @@ tryBtn.addEventListener("click", function (){
     count++
     tryElem.innerText = count
    }
-   
 })
