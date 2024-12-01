@@ -6,32 +6,25 @@ const output = document.querySelector("#output")
 const outputContent = () => {
   const selectVal = selectContent.value;
   const inputContent = input.value;
-  const grades = getGrade(inputContent)
+  const grades = getGrade(inputContent);
   const displayInputs = output;
-  const no = countInput(grades)
+  const countInput = countNum()
   if(inputContent !== ""){
     let contents = document.createElement("div")
     contents.classList.add("output-items")
-    contents.innerHTML  = `<p class="output-elem">${no}</p> <p class="output-elem">${selectVal}</p> <p class="output-elem">${inputContent}
-    </p> <p class="output-elem">${grades}</p>`
+    contents.innerHTML  = `<p class="output-elem no">${countInput}</p> <p class="output-elem">${selectVal}</p> 
+    <p class="output-elem">${inputContent}</p> <p class="output-elem">${grades}</p>`
     displayInputs.appendChild(contents)
   }else{alert("Score field is empty. please input a valid score")}
 }
 
-function countInput(score){
-  for(let i = 1; i < score; i++){
-    return i
-  }
-}
-
-const getAVerage = scores => {
-  let sum = 0
-  let average
-  for(let score of scores){
-    sum += score;
-    average = sum / scores.length
-  }
-  return average
+function countNum(){
+  const getNumberCount = Array.from(document.querySelectorAll(".no"))
+    let count;
+    for(let i = 0; i < getNumberCount.length; i++){
+      count = i + 1;
+    }
+    return count
 }
 
 
@@ -53,6 +46,19 @@ const getGrade = (score) => {
   return "F"
 }
 }
+
+
+
+const getAVerage = scores => {
+  let sum = 0
+  let average
+  for(let score of scores){
+    sum += score;
+    average = sum / scores.length
+  }
+  return average
+}
+
 
 const hasPassingGrade = score => { return getGrade(score) !== "F"}
 console.log(hasPassingGrade())
