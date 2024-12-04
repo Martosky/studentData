@@ -17,7 +17,9 @@ const outputContent = () => {
   }else{alert("Score field is empty. please input a valid score")}
 }
 
-
+const remarksMsg = () => {
+    
+}
 
 
 const getGrade = (score) => {
