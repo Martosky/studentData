@@ -8,28 +8,20 @@ const outputContent = () => {
   const inputContent = input.value;
   const grades = getGrade(inputContent);
   const displayInputs = output;
-  const countInput = countNum()
   if(inputContent !== ""){
     let contents = document.createElement("div")
     contents.classList.add("output-items")
-    contents.innerHTML  = `<p class="output-elem no">${countInput}</p> <p class="output-elem">${selectVal}</p> 
+    contents.innerHTML  = `<p class="output-elem no">#</p> <p class="output-elem">${selectVal}</p> 
     <p class="output-elem">${inputContent}</p> <p class="output-elem">${grades}</p>`
     displayInputs.appendChild(contents)
   }else{alert("Score field is empty. please input a valid score")}
 }
 
-function countNum(){
-  const getNumberCount = Array.from(document.querySelectorAll(".no"))
-    let count;
-    for(let i = 0; i < getNumberCount.length; i++){
-      count = i + 1;
-    }
-    return count
-}
+
 
 
 const getGrade = (score) => {
-  if(score === 100){
+  if(score == 100){
     return "A+";
   }else if(score >=90){
     return "A";

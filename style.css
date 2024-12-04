@@ -16,6 +16,7 @@ body{
 }
 
 .header-bg{
+    max-height: 150px;
     background-color: var(--second-bg);
     padding: 5px;
 }
@@ -32,8 +33,8 @@ body{
 }
 
 .header-elem img{
-    width: 110px;
-    height: 110px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
 }
 
