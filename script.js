@@ -65,6 +65,8 @@ const outputMsg = (totalScore, studentScore) => {
 }
 const remarkMes = document.getElementById("cont-remark")
 
+const totalCount = []
+
 const remarksMsg = () => {
   const number = document.querySelectorAll(".no-count");
   const arrayNum = Array.from(number)
