@@ -11,14 +11,12 @@ const outputContent = () => {
   if(inputContent !== ""){
     let contents = document.createElement("div")
     contents.classList.add("output-items")
-    contents.innerHTML  = `<p class="output-elem no">#</p> <p class="output-elem">${selectVal}</p> 
+    contents.innerHTML  = `<p class="output-elem no">#</p> <p class="output-elem no-count">${selectVal}</p> 
     <p class="output-elem">${inputContent}</p> <p class="output-elem">${grades}</p>`
     displayInputs.appendChild(contents)
   }else{alert("Score field is empty. please input a valid score")}
-}
-
-const remarksMsg = () => {
-    
+  remarksMsg()
+  saveData()
 }
 
 
@@ -54,8 +52,9 @@ const getAVerage = scores => {
 }
 
 
+
 const hasPassingGrade = score => { return getGrade(score) !== "F"}
-console.log(hasPassingGrade())
+
 
 const outputMsg = (totalScore, studentScore) => {
 
@@ -64,7 +63,21 @@ const outputMsg = (totalScore, studentScore) => {
     }
 
 }
- 
+const remarkMes = document.getElementById("cont-remark")
 
-
+const remarksMsg = () => {
+  const number = document.querySelectorAll(".no-count");
+  number.style.color = "yellow";
+}
   
+  /*
+  const arrayNum = Array.from(number)
+  if (hasPassingGrade(arrayCount)){
+    remarkMes.innerHTML = `Your average score is ${arrayCount}. Your grade is ${getGrade(arrayCount)}.
+     You <span style="color: green;">passed</span>`
+  }else{
+    remarkMes.innerHTML = `Your average score is ${arrayCount}. Your grade is ${getGrade(arrayCount)}.
+     You <span style="color: red;">Failed</span>`
+  }
+let arrayCount = getAVerage(arrayNum)
+  */
