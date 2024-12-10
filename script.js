@@ -79,6 +79,4 @@ const remarksMsg = () => {
 }
 }
   
-  /*
-   let arrayCount = getAVerage(arrayNum)
-  */
+ 
