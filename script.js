@@ -65,16 +65,6 @@ const outputMsg = (totalScore, studentScore) => {
 }
 
 
-const remarksMsg = () => {
-  const number = document.querySelectorAll(".no-count");
-  const arrayNum = Array.from(number)
-  if (hasPassingGrade(arrayCount)){
-    remarkMes.innerHTML = `Your average score is ${arrayCount}. Your grade is ${getGrade(arrayCount)}.
-     You <span style="color: green;">passed</span>`
-  }else{
-    remarkMes.innerHTML = `Your average score is ${arrayCount}. Your grade is ${getGrade(arrayCount)}.
-     You <span style="color: red;">Failed</span>`
-}
-}
+  
   
  
